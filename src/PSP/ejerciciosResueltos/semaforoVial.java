@@ -1,5 +1,5 @@
 package PSP.ejerciciosResueltos;
-
+// Se utiliza para controlar el acceso a un recurso compartido entre múltiples hilos.
 import java.util.concurrent.Semaphore;
 
 // Clase principal que representa un sistema de control de tráfico usando semáforos
