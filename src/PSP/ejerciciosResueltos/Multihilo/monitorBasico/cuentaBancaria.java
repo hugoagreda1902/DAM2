@@ -1,4 +1,4 @@
-package PSP.ejerciciosResueltos.monitorBasico;
+package PSP.ejerciciosResueltos.Multihilo.monitorBasico;
 
 // Clase que simula una cuenta bancaria con métodos sincronizados para manejar depósitos y retiros.
 class cuentaBancaria {

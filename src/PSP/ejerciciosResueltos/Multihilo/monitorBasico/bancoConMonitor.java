@@ -1,4 +1,4 @@
-package PSP.ejerciciosResueltos.monitorBasico;
+package PSP.ejerciciosResueltos.Multihilo.monitorBasico;
 
 public class bancoConMonitor {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package PSP.ejerciciosResueltos.Supermercado;
+package PSP.ejerciciosResueltos.Multihilo.Supermercado;
 
 import java.util.concurrent.BlockingQueue; // Interface que define la cola de clientes con operaciones de bloqueo
 import java.util.concurrent.LinkedBlockingQueue; // Implementación de BlockingQueue que usa una lista enlazada para almacenar los elementos

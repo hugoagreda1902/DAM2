@@ -1,4 +1,4 @@
-package PSP.ejerciciosResueltos.pilaConcurrente;
+package PSP.ejerciciosResueltos.Multihilo.pilaConcurrente;
 
 public class PilaConcurrenteMain {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package PSP.ejerciciosResueltos.contadorMonitores;
+package PSP.ejerciciosResueltos.Multihilo.contadorMonitores;
 
 // Clase que representa un contador seguro para ser utilizado por múltiples hilos
 class contador {

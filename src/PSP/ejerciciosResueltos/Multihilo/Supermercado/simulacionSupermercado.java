@@ -1,4 +1,4 @@
-package PSP.ejerciciosResueltos.Supermercado;
+package PSP.ejerciciosResueltos.Multihilo.Supermercado;
 
 public class simulacionSupermercado {
     public static void main(String[] args) {

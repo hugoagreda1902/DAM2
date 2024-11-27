@@ -1,4 +1,4 @@
-package PSP.ejerciciosResueltos.contadorMonitores;
+package PSP.ejerciciosResueltos.Multihilo.contadorMonitores;
 
 // Clase que ejecutará el programa utilizando la clase Contador
 public class contadorSeguro {

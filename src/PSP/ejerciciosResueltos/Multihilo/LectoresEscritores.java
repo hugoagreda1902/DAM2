@@ -1,4 +1,4 @@
-package PSP.ejerciciosResueltos;
+package PSP.ejerciciosResueltos.Multihilo;
 
 // Importa las clases necesarias para trabajar con bloqueos de lectura/escritura
 import java.util.concurrent.locks.Lock; // Interfaz que proporciona operaciones de bloqueo y desbloqueo

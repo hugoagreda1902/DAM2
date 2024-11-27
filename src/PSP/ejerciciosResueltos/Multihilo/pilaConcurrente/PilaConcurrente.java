@@ -1,4 +1,4 @@
-package PSP.ejerciciosResueltos.pilaConcurrente;
+package PSP.ejerciciosResueltos.Multihilo.pilaConcurrente;
 
 import java.util.LinkedList;
 

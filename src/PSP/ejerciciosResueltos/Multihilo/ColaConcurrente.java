@@ -1,4 +1,4 @@
-package PSP.ejerciciosResueltos;
+package PSP.ejerciciosResueltos.Multihilo;
 
 // Importamos las clases necesarias para trabajar con una cola concurrente y un contador atómico.
 import java.util.Queue;

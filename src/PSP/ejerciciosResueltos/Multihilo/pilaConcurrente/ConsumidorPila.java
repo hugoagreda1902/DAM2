@@ -1,4 +1,4 @@
-package PSP.ejerciciosResueltos.pilaConcurrente;
+package PSP.ejerciciosResueltos.Multihilo.pilaConcurrente;
 
 // Clase que simula a un consumidor que extrae elementos de la pila
 class ConsumidorPila implements Runnable {

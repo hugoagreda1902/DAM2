@@ -1,4 +1,4 @@
-package PSP.ejerciciosResueltos;
+package PSP.ejerciciosResueltos.Multihilo;
 // Se utiliza para controlar el acceso a un recurso compartido entre múltiples hilos.
 import java.util.concurrent.Semaphore;
 

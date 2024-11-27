@@ -1,4 +1,4 @@
-package PSP.ejerciciosResueltos;
+package PSP.ejerciciosResueltos.Multihilo;
 
 // Importamos las clases necesarias para usar una cola bloqueante.
 import java.util.concurrent.ArrayBlockingQueue;

@@ -1,4 +1,4 @@
-package PSP.ejerciciosResueltos;
+package PSP.ejerciciosResueltos.Multihilo;
 
 // Importamos la clase Semaphore, que permite gestionar el acceso controlado a un recurso compartido.
 import java.util.concurrent.Semaphore;

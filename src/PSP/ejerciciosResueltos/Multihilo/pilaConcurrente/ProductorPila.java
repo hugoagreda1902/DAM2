@@ -1,7 +1,5 @@
-package PSP.ejerciciosResueltos.pilaConcurrente;
+package PSP.ejerciciosResueltos.Multihilo.pilaConcurrente;
 
-
-import PSP.ejerciciosResueltos.pilaConcurrente.PilaConcurrente;
 
 // Clase que simula a un productor que agrega elementos a la pila
 class ProductorPila implements Runnable {
