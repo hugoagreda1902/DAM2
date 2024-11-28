@@ -1,0 +1,41 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Mastermind {
+
+
+	
+	public static void main(String[] args) {
+		String numeroSecreto="2531";
+		ArrayList<String> tabla = new ArrayList<String>();
+		for (int i=0;i<numeroSecreto.length();i++)
+		  tabla.add(numeroSecreto.substring(i, i+1));
+		
+		System.out.println(devolverResultado("5234", tabla));
+		
+		
+//		Scanner sc=new Scanner(System.in);
+//		boolean exito=false;
+//		while(!exito) {
+//		System.out.println("Introduzca número");
+////		String num=sc.next();
+//		 		
+//		
+//		}
+
+	}
+	private static StringBuffer devolverResultado(String numero,ArrayList<String> tabla) {
+        
+
+		StringBuffer resultado= new StringBuffer();
+		for (int i=0;i<numero.length();i++)
+			if(numero.substring(i, i+1).equals(tabla.get(i)))
+				resultado.append("*");
+			else if(tabla.contains(numero.substring(i, i+1)))
+				  resultado.append("+");
+		
+		return resultado;
+		
+	}
+
+}
