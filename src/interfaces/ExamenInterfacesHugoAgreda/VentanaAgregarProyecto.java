@@ -1,8 +1,7 @@
-package ExamenInterfacesHugoAgreda;
+package interfaces.ExamenInterfacesHugoAgreda;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ItemEvent;
 import java.util.ArrayList;
 
 public class VentanaAgregarProyecto extends JDialog {

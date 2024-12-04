@@ -1,4 +1,4 @@
-package ExamenInterfacesHugoAgreda;
+package interfaces.ExamenInterfacesHugoAgreda;
 
 import javax.swing.*;
 
