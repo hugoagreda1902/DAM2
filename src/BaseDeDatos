@@ -1,0 +1,140 @@
+CREATE DATABASE Acceso;
+-- DROP DATABASE Acceso;
+
+USE Acceso;
+CREATE TABLE estudiantes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(50) NOT NULL,
+    edad INT NOT NULL
+);
+
+INSERT INTO estudiantes (nombre, edad) VALUES
+('Carlos',20),
+('Hugo',24),
+('David',18),
+('Victor',32),
+('Andres',50);
+-- DROP TABLE estudiantes;
+
+CREATE TABLE usuario (
+    nombre_usuario VARCHAR(50) NOT NULL PRIMARY KEY,
+    contraseña VARCHAR(8) NOT NULL
+
+);
+
+INSERT INTO usuario (nombre_usuario, contraseña) VALUES
+('root',1234),
+('hugo',0987);
+-- DROP TABLE usuario;
+
+CREATE TABLE empleados1 (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(50) NOT NULL,
+    apellido VARCHAR(50) NOT NULL,
+    salario DECIMAL(10,2),
+    departamento VARCHAR(50)
+);
+
+INSERT INTO empleados1 (nombre, apellido, salario, departamento) VALUES
+('Juan', 'Pérez', 3500.00, 'Ventas'),
+('María', 'López', 4000.00, 'Ventas'),
+('Carlos', 'Gómez', 2500.00, 'IT'),
+('Ana', 'Martínez', 3000.00, 'IT');
+-- DROP TABLE libros;
+
+DELIMITER //
+CREATE PROCEDURE calcularSalarioTotal (
+    IN p_departamento varchar(50),
+    OUT p_salario_total decimal(10,2)
+)
+BEGIN
+    SELECT SUM(salario) INTO p_salario_total
+    FROM empleados1
+    WHERE departamento = p_departamento;
+END //
+DELIMITER ;
+-- DROP PROCEDURE IF EXISTS calcularSalarioTotal;
+
+CREATE TABLE empleadosYproyectos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(50) NOT NULL,
+    apellido VARCHAR(50) NOT NULL,
+    proyecto VARCHAR(50) NOT NULL,
+    horas_trabajadas INT NOT NULL
+);
+
+INSERT INTO empleadosYproyectos (nombre, apellido, proyecto, horas_trabajadas) VALUES
+('Juan', 'Pérez', 'Proyecto1', 10),
+('María', 'López', 'Proyecto1', 19),
+('Carlos', 'Gómez', 'Proyecto2', 8),
+('Ana', 'Martínez', 'Proyecto3', 5);
+
+DELIMITER //
+CREATE PROCEDURE horasTrabajadas (
+    IN p_proyecto VARCHAR(50)
+)
+BEGIN
+    SELECT nombre, horas_trabajadas
+    FROM empleadosYproyectos
+    WHERE proyecto = p_proyecto;
+END //
+DELIMITER ;
+
+CALL horasTrabajadas('Proyecto1');
+-- DROP PROCEDURE IF EXISTS horasTrabajadas;
+
+CREATE TABLE cuentas (
+    id INT PRIMARY KEY,
+    titular VARCHAR(100),
+    saldo DOUBLE
+);
+
+INSERT INTO cuentas (id, titular, saldo) VALUES
+(1, 'Juan', 1000.0),
+(2, 'María', 500);
+
+UPDATE cuentas SET saldo = 500 WHERE id = 1;
+
+SELECT * FROM cuentas;
+
+CREATE TABLE libros (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    titulo VARCHAR(255) NOT NULL,
+    autor VARCHAR(255) NOT NULL,
+    genero VARCHAR(100) NOT NULL,
+    stock INT NOT NULL,
+    precio DOUBLE(10, 2) NOT NULL
+);
+
+INSERT INTO libros (titulo, autor, genero, stock, precio) VALUES
+    ('Señor de los anillos', 'Hugo Ágreda', 'Drama', 50, 10.5);
+
+SELECT * FROM libros;
+
+DELIMITER //
+
+CREATE PROCEDURE calcular_total_ventas_por_genero()
+BEGIN
+    SELECT genero, SUM(precio * (10 - stock)) AS total_ventas
+    FROM libros
+    GROUP BY genero;
+END //
+
+DELIMITER ;
+
+CREATE TABLE IF NOT EXISTS films (
+    code CHAR(5) PRIMARY KEY, -- Clave primaria
+    title VARCHAR(40) NOT NULL, -- Título, obligatorio
+
+    did INT NOT NULL, -- ID del director, obligatorio
+    date_prod DATE DEFAULT NULL, -- Fecha de producción, opcional
+    kind VARCHAR(10), -- Género
+    len INT -- Duración en minutos
+);
+
+-- Insertar datos en la tabla
+INSERT INTO films VALUES
+('UA502', 'Bananas', 105, DEFAULT, 'Comedy', 82);
+
+INSERT INTO films (code, title, did, date_prod, kind)
+VALUES ('T_601', 'Yojimbo', 106, DEFAULT, 'Drama')
